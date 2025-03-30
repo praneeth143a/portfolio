@@ -38,13 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Check for saved theme preference
+        // Check for saved theme preference or set dark mode as default
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
+        
+        // If no theme is saved or dark mode is saved, apply dark mode
+        if (!savedTheme || savedTheme === 'dark') {
             document.body.classList.add('dark-mode');
             const icon = themeToggle.querySelector('i');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
+            
+            // Save the theme preference if not already saved
+            if (!savedTheme) {
+                localStorage.setItem('theme', 'dark');
+            }
         }
     }
     

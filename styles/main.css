@@ -1073,14 +1073,6 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
-  section {
-    padding: 60px 0;
-  }
-
-  .navbar {
-    padding: 15px 20px;
-  }
-  
   .nav-links {
     position: fixed;
     top: 80px;
@@ -1137,52 +1129,24 @@ footer p {
   .achievement-stats {
     flex-wrap: wrap;
   }
-  
-  .hero-content {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 40px;
-  }
-  
-  .hero-text {
-    text-align: center;
-  }
-  
-  .hero-buttons {
-    justify-content: center;
-  }
-  
-  .profile-image {
-    width: 220px;
-    height: 220px;
-  }
-  
-  .timeline-content {
-    padding: 15px;
-  }
 }
 
 @media screen and (max-width: 480px) {
-  section {
-    padding: 40px 0;
-  }
-  
   .section-title h2 {
     font-size: 2rem;
   }
   
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   
   .hero-text h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   
   .profile-image {
-    width: 180px;
-    height: 180px;
-    border-width: 3px;
+    width: 250px;
+    height: 250px;
   }
   
   .hero-buttons {
@@ -1214,69 +1178,6 @@ footer p {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-  }
-  
-  .timeline-item {
-    margin-bottom: 30px;
-  }
-  
-  .timeline-content {
-    padding: 10px;
-  }
-  
-  .about-text h3 {
-    font-size: 1.5rem;
-  }
-  
-  .details-grid {
-    gap: 15px;
-  }
-  
-  .navbar {
-    padding: 10px 15px;
-  }
-  
-  .logo {
-    font-size: 20px;
-  }
-  
-  .contact-details li {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .social-link {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-  
-  .quick-links {
-    flex-direction: column;
-  }
-}
-
-/* Small Phones */
-@media screen and (max-width: 360px) {
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-  
-  .hero-text h2 {
-    font-size: 1.1rem;
-  }
-  
-  .profile-image {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .section-title h2 {
-    font-size: 1.7rem;
-  }
-  
-  .skill-bar {
-    margin-bottom: 15px;
   }
 }
 
@@ -1372,13 +1273,37 @@ footer p {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  /* This is handled in the main responsive section */
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 768px) {
-  /* This is handled in the main responsive section */
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 @media (max-width: 576px) {
-  /* This is handled in the main responsive section */
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    border-width: 3px;
+  }
 } 

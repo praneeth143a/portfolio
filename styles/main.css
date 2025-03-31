@@ -162,6 +162,8 @@ section:nth-child(even) {
   min-height: 100vh;
   position: relative;
   padding-top: 80px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -172,6 +174,7 @@ section:nth-child(even) {
   text-align: left;
   width: 100%;
   max-width: 1100px;
+  padding: 0 20px;
 }
 
 .profile-image {
@@ -1029,6 +1032,7 @@ footer p {
 @media screen and (max-width: 1024px) {
   .hero-content {
     gap: 40px;
+    padding: 0 15px;
   }
   
   .hero-text h1 {
@@ -1107,11 +1111,15 @@ footer p {
     flex-direction: column-reverse;
     text-align: center;
     gap: 40px;
-    padding-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
   }
   
   .hero-text {
     text-align: center;
+    width: 100%;
+    max-width: 500px;
   }
   
   .hero-buttons {
@@ -1130,9 +1138,18 @@ footer p {
   section {
     padding: 80px 0;
   }
+  
+  .scroll-indicator {
+    bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
   section {
     padding: 60px 0;
   }
@@ -1142,26 +1159,34 @@ footer p {
   }
   
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .hero-text h2 {
     font-size: 1.5rem;
   }
   
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
   .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   
   .hero-buttons {
     flex-direction: column;
     width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
   }
   
   .primary-btn, .secondary-btn {
     width: 100%;
     text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
   
   .skills-tabs {
@@ -1204,11 +1229,42 @@ footer p {
   footer {
     padding: 20px 0;
   }
+  
+  .navbar {
+    padding: 15px;
+  }
+  
+  .logo {
+    font-size: 20px;
+    margin-left: 0;
+  }
+  
+  .project-img {
+    height: 200px;
+  }
+  
+  .timeline-item {
+    padding-left: 20px;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
 }
 
+/* For desktop mode on mobile devices and ultra-small screens */
 @media screen and (max-width: 360px) {
+  .hero-section {
+    min-height: auto;
+    padding: 100px 0 40px;
+  }
+  
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   .hero-text h2 {
@@ -1216,8 +1272,9 @@ footer p {
   }
   
   .profile-image {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
+    border-width: 3px;
   }
   
   .section-title h2 {
@@ -1234,6 +1291,88 @@ footer p {
   
   .contact-content {
     padding: 15px;
+  }
+  
+  .hero-buttons {
+    max-width: 200px;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+}
+
+/* Ensure that viewport-relative units work well on all devices */
+@media screen and (max-height: 700px) {
+  .hero-section {
+    min-height: auto;
+    padding: 100px 0 40px;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    margin-bottom: 15px;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* For desktop site viewed on mobile in landscape mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding: 80px 0 30px;
+  }
+  
+  .hero-content {
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+  }
+  
+  .primary-btn, .secondary-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+  
+  section {
+    padding: 40px 0;
   }
 }
 

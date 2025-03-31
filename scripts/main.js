@@ -2,11 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
     
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+            // Prevent body scrolling when menu is open
+            body.classList.toggle('menu-open');
         });
     }
     
@@ -15,7 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+            body.classList.remove('menu-open');
         });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') && 
+            !navLinks.contains(e.target) && 
+            !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
     });
     
     // Dark Mode Toggle
@@ -38,20 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Check for saved theme preference or set dark mode as default
+        // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme');
-        
-        // If no theme is saved or dark mode is saved, apply dark mode
-        if (!savedTheme || savedTheme === 'dark') {
+        if (savedTheme === 'dark') {
             document.body.classList.add('dark-mode');
             const icon = themeToggle.querySelector('i');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
-            
-            // Save the theme preference if not already saved
-            if (!savedTheme) {
-                localStorage.setItem('theme', 'dark');
-            }
         }
     }
     

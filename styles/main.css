@@ -1100,6 +1100,7 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+<<<<<<< HEAD
   section {
     padding: 70px 0;
   }
@@ -1108,6 +1109,8 @@ footer p {
     padding: 15px;
   }
   
+=======
+>>>>>>> origin/update-btech-date
   .nav-links {
     position: fixed;
     left: -100%;
@@ -1162,6 +1165,7 @@ footer p {
   .achievement-stats {
     grid-template-columns: 1fr 1fr;
   }
+<<<<<<< HEAD
   
   .hero-content {
     flex-direction: column-reverse;
@@ -1222,15 +1226,21 @@ footer p {
     padding: 50px 0;
   }
   
+=======
+}
+
+@media screen and (max-width: 480px) {
+>>>>>>> origin/update-btech-date
   .section-title h2 {
     font-size: 1.8rem;
   }
   
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   
   .hero-text h2 {
+<<<<<<< HEAD
     font-size: 1.4rem;
   }
   
@@ -1238,6 +1248,14 @@ footer p {
     width: 180px;
     height: 180px;
     margin: 0 auto;
+=======
+    font-size: 1.5rem;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+>>>>>>> origin/update-btech-date
   }
   
   .hero-buttons {
@@ -1268,6 +1286,7 @@ footer p {
     grid-template-columns: 1fr;
     gap: 15px;
   }
+<<<<<<< HEAD
   
   .timeline-item {
     padding: 15px;
@@ -1380,6 +1399,8 @@ footer p {
     padding: 3px 8px;
     font-size: 0.8rem;
   }
+=======
+>>>>>>> origin/update-btech-date
 }
 
 .centered-contact {
@@ -1474,13 +1495,37 @@ footer p {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  /* This is handled in the main responsive section */
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 768px) {
-  /* This is handled in the main responsive section */
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 @media (max-width: 576px) {
-  /* This is handled in the main responsive section */
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    border-width: 3px;
+  }
 } 

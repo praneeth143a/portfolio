@@ -13,29 +13,29 @@
     <!-- Mobile theme color -->
     <meta name="theme-color" content="#0f172a">
 </head>
-<body>
-    <div class="container">
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="logo">Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="theme-toggle">
-                <i class="fas fa-moon"></i>
-            </div>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
+<body class="dark-mode">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
 
+    <div class="container">
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
             <div class="hero-content">
@@ -296,7 +296,7 @@
             </div>
             <p class="section-subtitle">Have a question or want to work together? Feel free to reach out!</p>
             
-            <div class="contact-content centered-contact">
+            <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-person">
                         <h3>Praneeth Kumar Basaboina</h3>
@@ -326,24 +326,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Who am I Section -->
-        <section class="who-am-i-section" id="who-am-i">
-            <div class="section-title">
-                <h2>Who am I</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="who-am-i-content">
-                <div class="who-am-i-text">
-                    <p>I am a passionate B.Tech student in Electrical and Electronics Engineering, driven by a deep interest in technology and innovation. My journey in engineering has equipped me with a strong foundation in electrical systems, control theory, and digital electronics.</p>
-                    <p>Beyond academics, I am an avid writer and filmmaker, using these creative outlets to express my ideas and share knowledge. I believe in the power of combining technical expertise with creative thinking to solve real-world problems.</p>
-                    <p>My goal is to contribute to the development of sustainable and efficient electrical systems while exploring the intersection of technology and creativity.</p>
-                </div>
-                <div class="who-am-i-image">
-                    <img src="images/eee.jpg" alt="Electrical Engineering">
-                </div>
-            </div>
-        </section>
     </div>
 
     <footer>
@@ -352,5 +334,17 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    
+    <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    </script>
 </body>
 </html> 

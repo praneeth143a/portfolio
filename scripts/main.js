@@ -53,13 +53,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Check for saved theme preference
+        // Check for saved theme preference or default to dark mode
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
+        if (savedTheme === 'light') {
+            document.body.classList.remove('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        } else {
+            // Default to dark mode
             document.body.classList.add('dark-mode');
             const icon = themeToggle.querySelector('i');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
         }
     }
     
@@ -88,14 +95,15 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
-            // Skip if the section doesn't exist (like certifications or achievements)
+            // Skip if the section doesn't exist
             if (!document.querySelector(targetId)) return;
             
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Account for fixed navbar
+                    top: targetElement.offsetTop - navbarHeight, // Account for fixed navbar
                     behavior: 'smooth'
                 });
             }
@@ -128,6 +136,63 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Typewriter effect for hero section
     initTypewriter();
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+    // Add active class to nav links based on scroll position
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
+    
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (window.pageYOffset >= sectionTop - navbarHeight - 10) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
+            }
+        });
+    });
+    
+    // Animate elements when they come into view
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Elements to animate
+    const animateElements = document.querySelectorAll('.section-title, .project-card, .skill-bar, .timeline-item');
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
 });
 
 // Typewriter effect for hero section
@@ -170,17 +235,4 @@ function initTypewriter() {
     
     // Start the typing effect
     if (textArray.length) setTimeout(type, newTextDelay + 250);
-}
-
-// Add an event listener for the scroll to implement sticky navigation
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    
-    if (window.scrollY > 50) {
-        navbar.style.padding = '10px 0';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.padding = '20px 0';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    }
-}); 
+} 

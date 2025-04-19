@@ -4,8 +4,8 @@
   --secondary-color: #4f46e5;
   --text-color: #1e293b;
   --light-text: #64748b;
-  --background-color: #ffffff;
-  --section-bg: #f8fafc;
+  --background-color: #e0f2fe; /* Sky blue background */
+  --section-bg: #f0f9ff; /* Lighter sky blue for sections */
   --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --transition: all 0.3s ease-in-out;
   --border-radius: 8px;
@@ -89,6 +89,10 @@ section {
 
 section:nth-child(even) {
   background-color: var(--section-bg);
+}
+
+section#certificates {
+  background-color: transparent !important;
 }
 
 /* Navigation */

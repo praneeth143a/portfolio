@@ -1,0 +1,659 @@
+/* Top Options Section */
+.top-options-section {
+    padding: 4rem 0;
+    background: var(--bg-color);
+}
+
+.top-options-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+}
+
+.top-option-box {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.top-option-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.top-option-box i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.top-option-box h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.top-option-box p {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+/* Certificate Tabs */
+.cert-tabs {
+    margin-top: 2rem;
+}
+
+.cert-tab {
+    background-color: #1e293b;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    margin: 0 0.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cert-tab.active {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+.cert-tab:hover:not(.active) {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+@media (max-width: 768px) {
+    .cert-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cert-tab {
+        margin: 0.5rem 0;
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+/* Certificates Section */
+#certificates {
+    padding: 4rem 0;
+    background-color: transparent;
+    color: #fff;
+}
+
+#certificates .section-title h2 {
+    text-align: center;
+    color: #fff;
+}
+
+#certificates .section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #adbac7;
+}
+
+.cert-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cert-option {
+    background: #1e293b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.cert-option.active, .cert-option:hover {
+    background: #0D6EFD;
+}
+
+.cert-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.cert-item {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-item h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cert-date {
+    color: #adbac7;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.cert-issuer {
+    color: #adbac7;
+    margin-bottom: 1rem;
+}
+
+.cert-description {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.skills-gained h4 {
+    color: #adbac7;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-tags span {
+    background: #343f55;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.view-certificate {
+    display: inline-block;
+    color: #0D6EFD;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Language Skills */
+.language-skills {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    padding: 0 2rem;
+}
+
+.language-skill {
+    margin-bottom: 2rem;
+}
+
+.language-skill h3 {
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.skill-bar {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #0D6EFD;
+    border-radius: 10px;
+}
+
+/* Skill Circles */
+.skill-circles {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.skill-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.circle-progress {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.circle-progress svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 8;
+}
+
+.circle-fill {
+    fill: none;
+    stroke: #3b82f6;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 251.2;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.skill-circle:nth-child(1) .circle-fill {
+    stroke-dashoffset: calc(251.2 - (251.2 * 90) / 100);
+}
+
+.skill-circle:nth-child(2) .circle-fill {
+    stroke-dashoffset: calc(251.2 - (251.2 * 85) / 100);
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.skill-circle h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Skill Tags Container */
+.skill-tags-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.skill-tag {
+    background-color: #1e293b;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3b82f6;
+}
+
+.skill-tag h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Simple Skills List */
+.simple-skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.simple-skills-list span {
+    color: #fff;
+    font-size: 1.2rem;
+    background: #1e293b;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Skills Tabs Simple */
+.skills-tabs-simple {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.skill-tab-simple {
+    background: transparent;
+    border: 2px solid #3b82f6;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tab-simple.active {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.skill-tab-simple:hover:not(.active) {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Skill Progress Container */
+.skill-progress-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.skill-progress-item {
+    margin-bottom: 2.5rem;
+}
+
+.skill-progress-item h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Simple Certificate Options */
+.cert-simple-options {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    margin: 2rem 0;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cert-simple-option {
+    color: #adbac7;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.cert-simple-option.active {
+    color: #fff;
+}
+
+.cert-simple-option.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #3b82f6;
+    border-radius: 3px;
+}
+
+.cert-simple-option:hover:not(.active) {
+    color: #e2e8f0;
+}
+
+/* Make certificates responsive */
+@media (max-width: 850px) {
+    .cert-item {
+        padding: 1.5rem;
+    }
+    
+    .circle-progress {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .percentage {
+        font-size: 1.2rem;
+    }
+    
+    .simple-skills-list {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .skills-tabs-simple {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .skill-tab-simple {
+        width: 100%;
+        max-width: 220px;
+    }
+    
+    .cert-simple-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding-left: 2rem;
+    }
+}
+
+/* Projects Section */
+
+/* Skill List Minimal */
+.skill-list-minimal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.skill-item-minimal {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-item-minimal:last-child {
+    border-bottom: none;
+}
+
+.skill-item-minimal h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+/* Cert Skill Boxes */
+.cert-skill-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.cert-skill-box {
+    background-color: #1a2332;
+    padding: 1.2rem 1.5rem;
+    border-radius: 5px;
+}
+
+.cert-skill-box h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .cert-skill-boxes {
+        padding: 0 1rem;
+    }
+}
+
+/* Certificate Boxes */
+.cert-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.cert-box {
+    background-color: #1e293b;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cert-box h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Simple Certificate List */
+.simple-cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.simple-cert-item {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+/* Certificate skill bars */
+.cert-skill-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    background-color: #1e293b;
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cert-skill-bar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #273548;
+}
+
+.cert-skill-bar .skill-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.cert-content {
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+    .cert-skill-bar {
+        padding: 1rem;
+    }
+    
+    .cert-skill-bar .skill-name {
+        font-size: 1rem;
+    }
+}
+
+/* Certificate Language Boxes */
+.cert-language-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.cert-language-box {
+    background-color: #1a2332;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cert-language-box h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+} 

@@ -94,4 +94,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Font Awesome for the icons
 - Google Fonts for the typography
-- Inspired by [Charan Yelimela's portfolio](https://charanyelimela.vercel.app/) 

@@ -7,12 +7,12 @@ Try {
 }
 
 Write-Host "`nAdding files to git..." -ForegroundColor Yellow
-# Add all changes including deleted files
-git add .
+git add index.html
+git add styles/main.css
+git add scripts/main.js
 
 Write-Host "`nCommitting changes..." -ForegroundColor Yellow
-$date = Get-Date -Format "yyyy-MM-dd HH:mm"
-git commit -m "Portfolio update - $date"
+git commit -m "Updated portfolio with responsive design and animations"
 
 Write-Host "`nPushing to GitHub..." -ForegroundColor Yellow
 git push origin main

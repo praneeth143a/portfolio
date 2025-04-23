@@ -1,6 +1,6 @@
 # Modern Portfolio Website
 
-A clean, responsive, and modern portfolio website for a B.Tech student in Electrical and Electronics Engineering with interests in writing, filmmaking, and technology. Based on the design of [Charan Yelimela's portfolio](https://charanyelimela.vercel.app/).
+A clean, responsive, and modern portfolio website for a B.Tech student in Electrical and Electronics Engineering with interests in writing, filmmaking, and technology.
 
 ## Features
 
